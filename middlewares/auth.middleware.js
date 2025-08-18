@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import userModel from "../Model/user.model.js";
+import userModel from "../models/user.model.js";
 
 // middleware for autherization
 export const protect = async (req, res, next) => {

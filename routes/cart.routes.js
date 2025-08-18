@@ -5,9 +5,9 @@ import {
   getCartItems,
   updateCart,
   updateQuantity,
-} from "../Controller/cart.controller.js";
+} from "../controllers/cart.controller.js";
 import express from "express";
-import { protect } from "../middleware/auth.middleware.js";
+import { protect } from "../middlewares/auth.middleware.js";
 
 // creating seperate router for cart methods 
 const cartRoute = express.Router();

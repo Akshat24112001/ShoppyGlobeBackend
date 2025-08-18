@@ -1,4 +1,4 @@
-import cartModel from "../Model/cart.model.js";
+import cartModel from "../models/cart.model.js";
 
 // controller for getting all cart items
 export async function getCartItems(req, res) {

@@ -1,4 +1,4 @@
-import productModel from "../Model/products.model.js";
+import productModel from "../models/products.model.js";
 
 // controller for fetching all products from the database
 export async function getProducts(req, res) {

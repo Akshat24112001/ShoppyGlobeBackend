@@ -2,7 +2,7 @@ import {
   getProducts,
   getSingleProduct,
   postProducts,
-} from "../Controller/products.controller.js";
+} from "../controllers/products.controller.js";
 import express from "express";
 
 // creating seperate router for products
