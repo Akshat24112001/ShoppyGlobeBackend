@@ -4,7 +4,11 @@ import userModel from "../models/user.model.js";
 // middleware for autherization
 export const protect = async (req, res, next) => {
   // getting token from cookies
-  const token = req.cookies.token;
+  // const token = req.cookies.token;
+
+  const token =
+    req.cookies?.token || req.header("Authorization")?.replace("Bearer ", "");
+
 // in case no token is not present in cookies
   if (!token) {
     return res.status(401).json({ message: "Not authorized, no token" });
