@@ -3,54 +3,6 @@ import { generateToken } from "../utils/generateToken.js";
 import bcrypt from "bcryptjs";
 
 // controller for registering user
-// export const registerUser = async (req, res) => {
-//   // getting name,email,password from request body
-//   const { name, email, password } = req.body;
-
-//   try {
-//     // checking if email already exists in database
-//     const existing = await userModel.findOne({ email });
-//     if (existing) {
-//       // user already exists message in case the email is found in the database
-//       return res.status(400).json({ message: "User already exists" });
-//     }
-
-//     // brypting the password in he database
-//     const hashedPassword = await bcrypt.hash(password, 10);
-
-//     // creating a user in the database
-//     const newUser = await userModel.create({
-//       name,
-//       email,
-//       password: hashedPassword,
-//     });
-
-//     // creating token corresponding to the user
-//     const token = generateToken(newUser._id);
-
-//     // Setting token in cookie
-//     res.cookie("token", token, {
-//       httpOnly: true,
-//       sameSite: "None",
-//       secure: true,
-//       maxAge: 7 * 24 * 60 * 60 * 1000,
-//     });
-
-//     // returning current user and token
-//     return res.status(201).json({
-//       user: {
-//         _id: newUser._id,
-//         name: newUser.name,
-//         email: newUser.email,
-//       },
-//       token,
-//     });
-//   } catch (error) {
-//     res
-//       .status(500)
-//       .json({ message: "Registration failed!!", error: error.message });
-//   }
-// };
 
 export const registerUser = async (req, res) => {
   // getting name,email,password from request body
